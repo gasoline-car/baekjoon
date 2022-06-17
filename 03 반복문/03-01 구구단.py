@@ -7,45 +7,7 @@
 # 출력
 # 출력형식과 같게 N*1부터 N*9까지 출력한다.
 
-# number = int(input())
+number = int(input())
 
-# for i in range (1,10) :
-#     print(number, '*', i, '=', number*i)
-
-
-sentence = input()
-sentence = sentence.split()
-
-num = len(sentence)
-
-list3 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p']
-list2 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
-list1 = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
-list0 = ['']
-
-i = 0
-while i < num :
-  if sentence[i] in list3:
-    sentence[i] = 3
-  elif sentence[i] in list2:
-    sentence[i] = 2
-  elif sentence[i] in list1:
-    sentence[i] = 1
-  else :
-    sentence[i] = 0
-
-j = 0
-while j < num :
-  sentence[j] = int(sentence[j])
-  j = j + 1    
-
-tire = 0
-k = 0
-while k < num-1 :
-  if sentence[i] <= sentence[i+1]:
-    tire = tire + (sentence[i+1]-sentence[i])
-  else :
-    tire = tire + (sentence[i]-sentence[i+1])
-
-print(tire)
-
+for i in range (1,10) :
+    print(number, '*', i, '=', number*i)
