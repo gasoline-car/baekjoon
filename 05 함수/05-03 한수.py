@@ -7,15 +7,18 @@
 # 출력
 # 첫째 줄에 1보다 크거나 같고, N보다 작거나 같은 한수의 개수를 출력한다.
 
-def a(n):
-    if int(n)<100:
-        k=1
-    else:
-        k=0;a=list(map(int,str(n)))
-        if (a[0]-a[1])==(a[1]-a[2]):
-            k=1
-    return k
-ka=0
-for i in range(int(input())+1):
-    ka=+a(i)
-print(ka)
+n = int(input())
+
+number = 0
+
+for i in range (1, n+1) :
+    if i<100 :
+        number +=1
+    else :
+        hund = i//100
+        ten = (i//10)%10
+        one = i%10
+        if hund-ten == ten-one :
+            number +=1
+            
+print(number)            

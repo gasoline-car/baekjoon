@@ -19,13 +19,16 @@
 # 출력
 # 10,000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 증가하는 순서로 출력한다.
 
-def d():
-    self_num = []
-    for j in range(1, 10001):
-        if j in self_num:
-            new_num = j + sum([int(i) for i in list(str(j))])
-            self_num.append(new_num)
-        else:
-            print(j)
-            new_num = j + sum([int(i) for i in list(str(j))])
-            self_num.append(new_num)
+number = list(range(1,10001))
+
+maker = []
+
+for n in range(1,10001):
+    n_str = sum(map(int, str(n)))
+    d_n = n + n_str
+    if d_n <= 10000:
+        maker.append(d_n)
+
+for j in number:
+    if j not in maker:
+        print(j)
